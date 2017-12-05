@@ -24,9 +24,7 @@ services:
       #- 127.0.0.1:3306:3306 # change ip if required
     volumes:
       - ./wp-data:/docker-entrypoint-initdb.d
-      - my-datavolume:/var/lib/mysql
-    volumes:
-      my-datavolume:
+      - ./mysql-data:/var/lib/mysql
     environment:
       MYSQL_DATABASE: wordpress
       MYSQL_ROOT_PASSWORD: coke9!aj
